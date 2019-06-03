@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>535</width>
-    <height>358</height>
+    <width>500</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,50 +20,16 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>90</y>
-      <width>231</width>
-      <height>161</height>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>441</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>40</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Записать в файл</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>110</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Открыть файл</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>260</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+     </font>
     </property>
    </widget>
   </widget>
@@ -69,12 +38,44 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>535</width>
-     <height>20</height>
+     <width>500</width>
+     <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Шрифт</string>
+    </property>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="action_5"/>
+    <addaction name="action_6"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Кодировка</string>
+    </property>
+    <addaction name="actionWindows_1251"/>
+    <addaction name="actionUTF_8"/>
+    <addaction name="actionIBM_866"/>
+    <addaction name="actionCP_1251"/>
+    <addaction name="actionCP866"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -83,6 +84,61 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Изменить цвет выделенного печатаемого текста</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Изменить стиль и шрифт теста</string>
+   </property>
+  </action>
+  <action name="actionWindows_1251">
+   <property name="text">
+    <string>Windows - 1251</string>
+   </property>
+  </action>
+  <action name="actionUTF_8">
+   <property name="text">
+    <string>UTF - 8</string>
+   </property>
+  </action>
+  <action name="actionIBM_866">
+   <property name="text">
+    <string>IBM 866</string>
+   </property>
+  </action>
+  <action name="actionCP_1251">
+   <property name="text">
+    <string>CP - 1251</string>
+   </property>
+  </action>
+  <action name="actionCP866">
+   <property name="text">
+    <string>CP866</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Изменить цвет фона текста</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Изменить цвет фона</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
